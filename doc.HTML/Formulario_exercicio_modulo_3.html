@@ -8,18 +8,20 @@
 </head>
 <body>
     <h1>Exercício Formulario</h1>
+    <h3>Preencha com seus dados para se cadastrar</h3>
     <form >
-        <label for="Preencha com seus dados para cadastro">Preencha com seus dados para se cadastrar</label>
-        <br/>
-        <input type="text" placeholder="Nome Completo"> <button type="reset">
-            Limpar
-        </button>
-        <br/>
-        <input type="text" placeholder="E_mail"> <button type="reset">
-            Limpar
-        <br />       
+        <label for="nome">Nome:</label><br>
+        <input type="text" placeholder="Nome Completo" id="nome"><br>
+        <label for="email">E_mail:</label><br>
+        <input type="email" placeholder="E_mail" id="email"><br>
+        <label for="senha">Senha:</label><br>
+        <input type="password" placeholder="Senha" name="Senha" id="senha"><br>
+    <br />
+    <button type="submit" id="Enviar">
+        Enviar
+    </button><br>
+    <br />
+    <button type="reset" id="limpar">Limpar</button>
     </form>
-    <button type="submit">
-        Enviar Cadastro
 </body>
 </html>
