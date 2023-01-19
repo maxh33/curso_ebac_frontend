@@ -1,3 +1,5 @@
+var numeroA= parseInt("CampoA");
+var numeroB= parseInt("CampoB");
 let PrimeiroNumero = document.querySelector("#CampoA");
 let SegundoNumero = document.querySelector("#CampoB");
 
