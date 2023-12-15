@@ -1,33 +1,48 @@
-$(document).ready(function()  {
-    $('header button').click(function() {
-        $('form').slideDown();
+$(document).ready(function() {
+
+    $('#phone').mask('(00) 00000-0000')
+    $('#zipCode').mask('00000-000')
+
+    $('form').validate({
+      rules: {
+        name: {
+          required: true
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        phone: {
+          required: true
+        },
+        fullAddress: {
+          required: true
+        },
+        zipCode: {
+          required: true,
+          zipCode: true
+        },
+        message: {
+          required: false
+        }
+      },
+      messages: {
+        name: 'Por favor, insira o seu nome completo',
+        email: 'Por favor, insira um email válido',
+        phone: 'Por favor, insira um telefone válido',
+        fullAddress: 'Por favor, insira um endereço válido',
+        zipCode: 'Por favor, insira um CEP válido',
+        message: 'Por favor, insira uma mensagem',
+      },
+      submitHandler: function(form) {
+        alert('Formulário enviado com sucesso!')
+      },
+      invalidHandler: function(event, validator) {
+        alert('Por favor, preencha todos os campos corretamente!')
+      },
     });
 
-    $('#done-button').click(function(e) {
-        e.preventDefault();
-        $('#newTask').val('');
-        $('form').slideUp();
-    });
-
-    $('#reset-button').click(function(e) {
-        e.preventDefault();
-        $('li').remove();
-        $('form').slideUp();
-    });
-
-    $('form').on('submit', function(e) {
-        e.preventDefault();
-        const newTask = $('#newTask').val();
-        const newItem = $('<li style="display:none"></li>');
-        $('<span></span>').text(newTask).appendTo(newItem);  
-        $(newItem).appendTo('ul');
-        $(newItem).fadeIn(1000);
-        $('#newTask').val('') 
-        $(newItem).appendTo('ul');
-        
-    });
-
-    $('ul').on('click', 'li', function() {
-        $(this).toggleClass('completed');
+    $('input[type="submit"]').click(function() {
+        $('form').submit();
     });
 });

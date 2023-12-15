@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jQuery</title>
+  <title>Exercicio_plugins_jquery </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -12,23 +11,47 @@
 </head>
 <body>
   <header>
-    <h1>Tasks List</h1>
-    <button type="header button">Start +</Img></button>
+    <div class="container containerFlex">
+      <h1>exercicio_plugins_jquery </h1>
+    </div>
   </header>
-  <form>
-      <h2>Insert any Activity</h2>
-      <input type="text" id="newTask" required placeholder="Describe"/>
-      <button type="submit">Add</button>
-      <button type="button" id="done-button">Done</button>
-      <button type="reset" id="reset-button">Reset All</button>
-  </form>
- <div>
-  <ul class="task-list">
-      <li>
-      </li>
-</ul>
- </div>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="main.js"></script>
+  <section id="contactForm">
+    <div class="container">
+      <h2>Contact</h2>
+      <form>
+          <div class="contactField">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div class="contactField">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="contactField">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="contactField">
+            <label for="fullAddress">Full Address</label>
+            <input type="text" id="fullAddress" name="fullAddress">
+          </div>
+          <div class="contactField">
+            <label for="zipCode">Zip Code</label>
+            <input type="text" id="zipCode" name="zipCode">
+          </div>
+          <div class="contactField">
+            <label for="message">Message (optional)</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+          <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+  <script type="text/javascript" src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-3.4.1.js"></script>
+  <script src="./js/jquery.mask.min.js"></script>
+  <script src="./js/jquery.validate.min.js"></script>
+  <script src="./js/messages_pt_BR.min.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
