@@ -1,8 +1,78 @@
-time {
-    display: block;
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-.post {
-    display: block;
-    margin-bottom: 1em;
+.navbar {
+    background-color: #614028;
+}
+
+#cabecalho .nav .nav-link.active {
+    color: #614028;
+    background-color: #fff;
+}
+
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover,
+.nav-link.active:hover {
+    color: #fff;
+}
+
+.navbar-toggler {
+    background-color: #E5C298;
+}
+
+.section-title {
+    font-family: pacifico, cursive;
+}
+
+#sobre-a-cafeteria {
+    background-color: #E5C298;
+}
+
+.text-colored {
+    color: #614028;
+}
+
+.nav-link.active,
+#fale-conosco button {
+    background-color: #614028;
+    color: #fff;
+}
+
+.nav-link-hover {
+    color: #614028;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 769px) {
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1281px) {
+    .carousel-item img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
 }
