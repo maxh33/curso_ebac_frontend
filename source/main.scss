@@ -1,0 +1,87 @@
+@use 'config/reset';
+@use 'config/variables';
+@use 'sass:math';
+
+@mixin formElement($margin: 16px ) {
+    padding: 8px;
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+
+}
+
+@function pixelToRem($pixelTarget, $baseFontSize: 16px) {
+    @return math.div($pixelTarget, $baseFontSize)+em;
+}
+
+body {
+    background-color: #eee;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header  {
+    background-color: variables.$primaryColor;
+    padding: 18px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.form-container {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 760px;
+
+    h2 {
+        font-size: pixelToRem(48px);
+        text-align: center;
+        margin-bottom: 16px;}
+
+    form {
+        width: 100%;
+        max-width: 480px;
+        margin-top: 40px;
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        input {
+            @include formElement();
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid variables.$primaryColor;
+        }
+
+        button {
+            @include formElement();
+            background-color: variables.$secondaryColor ;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: lighten(variables.$secondaryColor, 10%);
+            }
+        }
+    }
+}
+
+@media (max-width: variables.$mobile) {
+    .container {
+        max-width: 80%;
+    }
+}
